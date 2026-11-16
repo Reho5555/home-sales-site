@@ -1,0 +1,997 @@
+{
+ "source": "data/college_town_home_sales.csv",
+ "rules": {
+  "min_price": 10000,
+  "days_on_market": "contract_date minus list_date, rows with both dates only"
+ },
+ "first_sale_date": "2023-03-27",
+ "last_sale_date": "2026-03-25",
+ "below_min_price": 40,
+ "overall": {
+  "sales": 35442,
+  "priced_sales": 35402,
+  "median_price": 410000,
+  "median_price_per_sqft": 212,
+  "price_per_sqft_sales": 34901,
+  "median_days_on_market": 11,
+  "days_on_market_sales": 28042,
+  "median_price_by_year": {
+   "2023": {
+    "sales": 9588,
+    "median_price": 399000
+   },
+   "2024": {
+    "sales": 11643,
+    "median_price": 410000
+   },
+   "2025": {
+    "sales": 12293,
+    "median_price": 424900
+   },
+   "2026": {
+    "sales": 1872,
+    "median_price": 405000
+   }
+  },
+  "median_price_by_distance": [
+   {
+    "band": "Under 1 mi",
+    "sales": 1491,
+    "median_price": 480000
+   },
+   {
+    "band": "1–3 mi",
+    "sales": 12888,
+    "median_price": 400000
+   },
+   {
+    "band": "3–5 mi",
+    "sales": 11217,
+    "median_price": 375000
+   },
+   {
+    "band": "5 mi or more",
+    "sales": 9806,
+    "median_price": 445000
+   }
+  ]
+ },
+ "cities": [
+  {
+   "city": "Gainesville",
+   "state": "FL",
+   "university": "University of Florida",
+   "sales": 5477,
+   "priced_sales": 5469,
+   "median_price": 350000,
+   "median_price_per_sqft": 204,
+   "price_per_sqft_sales": 5463,
+   "median_days_on_market": 25,
+   "days_on_market_sales": 4372,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 1439,
+     "median_price": 350000
+    },
+    "2024": {
+     "sales": 1800,
+     "median_price": 350000
+    },
+    "2025": {
+     "sales": 1915,
+     "median_price": 356000
+    },
+    "2026": {
+     "sales": 314,
+     "median_price": 334000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 136,
+     "median_price": 408750
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 1424,
+     "median_price": 280000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 1756,
+     "median_price": 310000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 2153,
+     "median_price": 412000
+    }
+   ]
+  },
+  {
+   "city": "Madison",
+   "state": "WI",
+   "university": "University of Wisconsin-Madison",
+   "sales": 5061,
+   "priced_sales": 5061,
+   "median_price": 421000,
+   "median_price_per_sqft": 248,
+   "price_per_sqft_sales": 5060,
+   "median_days_on_market": 7,
+   "days_on_market_sales": 4068,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 1356,
+     "median_price": 395000
+    },
+    "2024": {
+     "sales": 1674,
+     "median_price": 420000
+    },
+    "2025": {
+     "sales": 1769,
+     "median_price": 440000
+    },
+    "2026": {
+     "sales": 261,
+     "median_price": 450000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 85,
+     "median_price": 678000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 770,
+     "median_price": 558900
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 1945,
+     "median_price": 385000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 2261,
+     "median_price": 420000
+    }
+   ]
+  },
+  {
+   "city": "Lafayette",
+   "state": "IN",
+   "university": "Purdue University",
+   "sales": 3057,
+   "priced_sales": 3053,
+   "median_price": 260000,
+   "median_price_per_sqft": 163,
+   "price_per_sqft_sales": 3052,
+   "median_days_on_market": 9,
+   "days_on_market_sales": 2604,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 771,
+     "median_price": 240000
+    },
+    "2024": {
+     "sales": 1011,
+     "median_price": 263000
+    },
+    "2025": {
+     "sales": 1083,
+     "median_price": 270000
+    },
+    "2026": {
+     "sales": 188,
+     "median_price": 262450
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 836,
+     "median_price": 190500
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 1054,
+     "median_price": 243000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 1163,
+     "median_price": 329000
+    }
+   ]
+  },
+  {
+   "city": "Ann Arbor",
+   "state": "MI",
+   "university": "University of Michigan",
+   "sales": 3021,
+   "priced_sales": 3009,
+   "median_price": 572000,
+   "median_price_per_sqft": 259,
+   "price_per_sqft_sales": 3000,
+   "median_days_on_market": 7,
+   "days_on_market_sales": 2450,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 915,
+     "median_price": 560000
+    },
+    "2024": {
+     "sales": 908,
+     "median_price": 571500
+    },
+    "2025": {
+     "sales": 1048,
+     "median_price": 585000
+    },
+    "2026": {
+     "sales": 138,
+     "median_price": 564000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 180,
+     "median_price": 700000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 1582,
+     "median_price": 539950
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 832,
+     "median_price": 600000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 415,
+     "median_price": 620000
+    }
+   ]
+  },
+  {
+   "city": "Athens",
+   "state": "GA",
+   "university": "University of Georgia",
+   "sales": 2814,
+   "priced_sales": 2809,
+   "median_price": 370000,
+   "median_price_per_sqft": 197,
+   "price_per_sqft_sales": 2357,
+   "median_days_on_market": 27,
+   "days_on_market_sales": 2279,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 718,
+     "median_price": 370000
+    },
+    "2024": {
+     "sales": 992,
+     "median_price": 372200
+    },
+    "2025": {
+     "sales": 950,
+     "median_price": 375000
+    },
+    "2026": {
+     "sales": 148,
+     "median_price": 356250
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 108,
+     "median_price": 385000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 845,
+     "median_price": 405000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 1196,
+     "median_price": 347250
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 660,
+     "median_price": 394228
+    }
+   ]
+  },
+  {
+   "city": "Charlottesville",
+   "state": "VA",
+   "university": "University of Virginia",
+   "sales": 2775,
+   "priced_sales": 2774,
+   "median_price": 615000,
+   "median_price_per_sqft": 270,
+   "price_per_sqft_sales": 2773,
+   "median_days_on_market": 7,
+   "days_on_market_sales": 2056,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 726,
+     "median_price": 574434
+    },
+    "2024": {
+     "sales": 968,
+     "median_price": 615000
+    },
+    "2025": {
+     "sales": 957,
+     "median_price": 650000
+    },
+    "2026": {
+     "sales": 122,
+     "median_price": 631000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 153,
+     "median_price": 580000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 1078,
+     "median_price": 577250
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 624,
+     "median_price": 693050
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 919,
+     "median_price": 635229
+    }
+   ]
+  },
+  {
+   "city": "Chapel Hill",
+   "state": "NC",
+   "university": "The University of North Carolina at Chapel Hill",
+   "sales": 2716,
+   "priced_sales": 2713,
+   "median_price": 735000,
+   "median_price_per_sqft": 277,
+   "price_per_sqft_sales": 2706,
+   "median_days_on_market": 10,
+   "days_on_market_sales": 2205,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 739,
+     "median_price": 725000
+    },
+    "2024": {
+     "sales": 882,
+     "median_price": 750000
+    },
+    "2025": {
+     "sales": 958,
+     "median_price": 730000
+    },
+    "2026": {
+     "sales": 134,
+     "median_price": 705000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 124,
+     "median_price": 975000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 763,
+     "median_price": 769000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 868,
+     "median_price": 735000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 958,
+     "median_price": 693912
+    }
+   ]
+  },
+  {
+   "city": "Champaign",
+   "state": "IL",
+   "university": "University of Illinois Urbana-Champaign",
+   "sales": 2286,
+   "priced_sales": 2285,
+   "median_price": 240000,
+   "median_price_per_sqft": 150,
+   "price_per_sqft_sales": 2275,
+   "median_days_on_market": 7,
+   "days_on_market_sales": 1784,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 675,
+     "median_price": 215000
+    },
+    "2024": {
+     "sales": 764,
+     "median_price": 247500
+    },
+    "2025": {
+     "sales": 717,
+     "median_price": 251000
+    },
+    "2026": {
+     "sales": 129,
+     "median_price": 242500
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 8,
+     "median_price": 193250
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 1088,
+     "median_price": 200000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 1011,
+     "median_price": 252000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 178,
+     "median_price": 492450
+    }
+   ]
+  },
+  {
+   "city": "Iowa City",
+   "state": "IA",
+   "university": "The University of Iowa",
+   "sales": 1909,
+   "priced_sales": 1909,
+   "median_price": 342000,
+   "median_price_per_sqft": 176,
+   "price_per_sqft_sales": 1907,
+   "median_days_on_market": 24,
+   "days_on_market_sales": 1248,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 518,
+     "median_price": 320000
+    },
+    "2024": {
+     "sales": 590,
+     "median_price": 345000
+    },
+    "2025": {
+     "sales": 706,
+     "median_price": 355000
+    },
+    "2026": {
+     "sales": 94,
+     "median_price": 321695
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 171,
+     "median_price": 335000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 1293,
+     "median_price": 305000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 415,
+     "median_price": 479900
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 30,
+     "median_price": 387500
+    }
+   ]
+  },
+  {
+   "city": "West Lafayette",
+   "state": "IN",
+   "university": "Purdue University",
+   "sales": 1559,
+   "priced_sales": 1559,
+   "median_price": 379900,
+   "median_price_per_sqft": 178,
+   "price_per_sqft_sales": 1559,
+   "median_days_on_market": 11,
+   "days_on_market_sales": 1293,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 408,
+     "median_price": 358750
+    },
+    "2024": {
+     "sales": 509,
+     "median_price": 375000
+    },
+    "2025": {
+     "sales": 552,
+     "median_price": 395000
+    },
+    "2026": {
+     "sales": 90,
+     "median_price": 398450
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 102,
+     "median_price": 405500
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 512,
+     "median_price": 375000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 649,
+     "median_price": 369120
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 296,
+     "median_price": 396008
+    }
+   ]
+  },
+  {
+   "city": "State College",
+   "state": "PA",
+   "university": "The Pennsylvania State University",
+   "sales": 1351,
+   "priced_sales": 1348,
+   "median_price": 430000,
+   "median_price_per_sqft": 208,
+   "price_per_sqft_sales": 1343,
+   "median_days_on_market": 8,
+   "days_on_market_sales": 908,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 391,
+     "median_price": 411200
+    },
+    "2024": {
+     "sales": 432,
+     "median_price": 425000
+    },
+    "2025": {
+     "sales": 459,
+     "median_price": 439000
+    },
+    "2026": {
+     "sales": 66,
+     "median_price": 485000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 219,
+     "median_price": 430000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 910,
+     "median_price": 435000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 219,
+     "median_price": 390000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 0,
+     "median_price": null
+    }
+   ]
+  },
+  {
+   "city": "Urbana",
+   "state": "IL",
+   "university": "University of Illinois Urbana-Champaign",
+   "sales": 1131,
+   "priced_sales": 1131,
+   "median_price": 229900,
+   "median_price_per_sqft": 144,
+   "price_per_sqft_sales": 1128,
+   "median_days_on_market": 8,
+   "days_on_market_sales": 872,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 320,
+     "median_price": 220000
+    },
+    "2024": {
+     "sales": 367,
+     "median_price": 227500
+    },
+    "2025": {
+     "sales": 372,
+     "median_price": 244200
+    },
+    "2026": {
+     "sales": 71,
+     "median_price": 212000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 126,
+     "median_price": 317500
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 766,
+     "median_price": 187000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 222,
+     "median_price": 308450
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 17,
+     "median_price": 285000
+    }
+   ]
+  },
+  {
+   "city": "Davis",
+   "state": "CA",
+   "university": "University of California, Davis",
+   "sales": 941,
+   "priced_sales": 941,
+   "median_price": 889000,
+   "median_price_per_sqft": 493,
+   "price_per_sqft_sales": 941,
+   "median_days_on_market": 11,
+   "days_on_market_sales": 792,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 255,
+     "median_price": 900000
+    },
+    "2024": {
+     "sales": 295,
+     "median_price": 900000
+    },
+    "2025": {
+     "sales": 347,
+     "median_price": 885000
+    },
+    "2026": {
+     "sales": 44,
+     "median_price": 798000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 76,
+     "median_price": 925000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 799,
+     "median_price": 875000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 58,
+     "median_price": 1260000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 8,
+     "median_price": 1593867
+    }
+   ]
+  },
+  {
+   "city": "Middleton",
+   "state": "WI",
+   "university": "University of Wisconsin-Madison",
+   "sales": 645,
+   "priced_sales": 645,
+   "median_price": 611000,
+   "median_price_per_sqft": 256,
+   "price_per_sqft_sales": 645,
+   "median_days_on_market": 8,
+   "days_on_market_sales": 560,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 156,
+     "median_price": 597500
+    },
+    "2024": {
+     "sales": 219,
+     "median_price": 595000
+    },
+    "2025": {
+     "sales": 227,
+     "median_price": 642900
+    },
+    "2026": {
+     "sales": 43,
+     "median_price": 519900
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 160,
+     "median_price": 605000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 485,
+     "median_price": 614322
+    }
+   ]
+  },
+  {
+   "city": "Savoy",
+   "state": "IL",
+   "university": "University of Illinois Urbana-Champaign",
+   "sales": 247,
+   "priced_sales": 247,
+   "median_price": 402700,
+   "median_price_per_sqft": 187,
+   "price_per_sqft_sales": 247,
+   "median_days_on_market": 10,
+   "days_on_market_sales": 212,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 68,
+     "median_price": 397450
+    },
+    "2024": {
+     "sales": 84,
+     "median_price": 386250
+    },
+    "2025": {
+     "sales": 90,
+     "median_price": 420000
+    },
+    "2026": {
+     "sales": 5,
+     "median_price": 362000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 21,
+     "median_price": 326000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 207,
+     "median_price": 406330
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 19,
+     "median_price": 450000
+    }
+   ]
+  },
+  {
+   "city": "Carrboro",
+   "state": "NC",
+   "university": "The University of North Carolina at Chapel Hill",
+   "sales": 208,
+   "priced_sales": 205,
+   "median_price": 605000,
+   "median_price_per_sqft": 316,
+   "price_per_sqft_sales": 204,
+   "median_days_on_market": 7,
+   "days_on_market_sales": 149,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 61,
+     "median_price": 551000
+    },
+    "2024": {
+     "sales": 55,
+     "median_price": 625000
+    },
+    "2025": {
+     "sales": 75,
+     "median_price": 610000
+    },
+    "2026": {
+     "sales": 14,
+     "median_price": 615000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 3,
+     "median_price": 469000
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 201,
+     "median_price": 605000
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 1,
+     "median_price": 2400000
+    }
+   ]
+  },
+  {
+   "city": "Newberry",
+   "state": "FL",
+   "university": "University of Florida",
+   "sales": 152,
+   "priced_sales": 152,
+   "median_price": 439995,
+   "median_price_per_sqft": 185,
+   "price_per_sqft_sales": 152,
+   "median_days_on_market": 87,
+   "days_on_market_sales": 133,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 46,
+     "median_price": 447205
+    },
+    "2024": {
+     "sales": 62,
+     "median_price": 443870
+    },
+    "2025": {
+     "sales": 37,
+     "median_price": 437990
+    },
+    "2026": {
+     "sales": 7,
+     "median_price": 429990
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 1,
+     "median_price": 320000
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 151,
+     "median_price": 440000
+    }
+   ]
+  },
+  {
+   "city": "Pittsboro",
+   "state": "NC",
+   "university": "The University of North Carolina at Chapel Hill",
+   "sales": 92,
+   "priced_sales": 92,
+   "median_price": 876986,
+   "median_price_per_sqft": 302,
+   "price_per_sqft_sales": 89,
+   "median_days_on_market": 38,
+   "days_on_market_sales": 57,
+   "median_price_by_year": {
+    "2023": {
+     "sales": 26,
+     "median_price": 876986
+    },
+    "2024": {
+     "sales": 31,
+     "median_price": 885000
+    },
+    "2025": {
+     "sales": 31,
+     "median_price": 950000
+    },
+    "2026": {
+     "sales": 4,
+     "median_price": 655000
+    }
+   },
+   "median_price_by_distance": [
+    {
+     "band": "Under 1 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "1–3 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "3–5 mi",
+     "sales": 0,
+     "median_price": null
+    },
+    {
+     "band": "5 mi or more",
+     "sales": 92,
+     "median_price": 876986
+    }
+   ]
+  }
+ ]
+}

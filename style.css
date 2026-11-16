@@ -1,0 +1,116 @@
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --text: #1f2328;
+  --muted: #5f6670;
+  --line: #e3dfd6;
+  --accent: #13294b;      /* Illinois navy */
+  --bar: #e84a27;         /* Illinois orange */
+  --bar-soft: #f6c8bb;
+  --row-hover: #fbf3ee;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14171c;
+    --surface: #1c2027;
+    --text: #e8eaed;
+    --muted: #9aa3ad;
+    --line: #2d333c;
+    --accent: #a9c1e8;
+    --bar: #f2714f;
+    --bar-soft: #5a3027;
+    --row-hover: #262b33;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+.wrap { max-width: 64rem; margin: 0 auto; padding: 0 1rem; }
+
+header { padding-top: 3rem; padding-bottom: 1.5rem; }
+.eyebrow { margin: 0; color: var(--bar); font-weight: 600; letter-spacing: .02em; }
+h1 { margin: .25rem 0 .5rem; font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15; color: var(--accent); }
+.lede { margin: 0; font-size: 1.1rem; color: var(--muted); max-width: 42rem; }
+h2 { margin: 0; font-size: 1.25rem; }
+h3 { margin: 0 0 .75rem; font-size: 1rem; }
+.note { margin: .25rem 0 0; font-size: .875rem; color: var(--muted); }
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+.kpi {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.kpi-label { display: block; font-size: .85rem; color: var(--muted); }
+.kpi-value { display: block; font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+.card-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: .75rem;
+  margin-bottom: 1rem;
+}
+.control { font-size: .875rem; color: var(--muted); display: flex; flex-direction: column; gap: .25rem; }
+select {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: .4rem .5rem;
+}
+
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { padding: .5rem .5rem; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+th { font-size: .8rem; color: var(--muted); font-weight: 600; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]:hover { color: var(--text); }
+th[aria-sort="ascending"]::after { content: " ▲"; }
+th[aria-sort="descending"]::after { content: " ▼"; }
+.num { text-align: right; }
+tbody tr { cursor: pointer; }
+tbody tr:hover, tbody tr.selected { background: var(--row-hover); }
+tbody tr.selected td:first-child { box-shadow: inset 3px 0 0 var(--bar); }
+.city-state { color: var(--muted); font-size: .8rem; margin-left: .25rem; }
+.bar-col { width: 30%; min-width: 8rem; }
+.bar-track { height: .7rem; border-radius: 4px; background: transparent; }
+.bar-fill { height: 100%; border-radius: 4px; background: var(--bar); }
+
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.5rem; }
+.bars { display: grid; gap: .5rem; }
+.bar-row { display: grid; grid-template-columns: 6.5rem 1fr 5.5rem; align-items: center; gap: .5rem; font-size: .875rem; font-variant-numeric: tabular-nums; }
+.bar-row .label { color: var(--muted); }
+.bar-row .value { text-align: right; font-weight: 600; }
+.bar-row .bar-track { height: 1rem; background: var(--bg); }
+.bar-row.partial .bar-fill { background: var(--bar-soft); }
+.bar-row small { display: block; font-weight: 400; color: var(--muted); font-size: .75rem; }
+
+.method ul { margin: .75rem 0 0; padding-left: 1.2rem; }
+.method li { margin-bottom: .4rem; }
+code { font-size: .85em; background: var(--bg); padding: .1em .3em; border-radius: 4px; }
+
+footer { padding-top: 1rem; padding-bottom: 3rem; font-size: .8rem; color: var(--muted); }

@@ -1,31 +1,100 @@
 <!DOCTYPE html>
-<!-- A placeholder from the Home Sales template. Replace this file with your site's first page. -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Under construction</title>
-  <!-- An empty icon, so the browser doesn't log an error looking for favicon.ico -->
+  <title>College-Town Home Prices</title>
+  <meta name="description" content="Median home sale prices, price per square foot and days on market in 18 college towns, computed from the College-town home sales dataset.">
   <link rel="icon" href="data:,">
-  <style>
-    :root { color-scheme: light dark; }
-    body {
-      max-width: 40rem;
-      margin: 0 auto;
-      padding: 3rem 1rem;
-      font-family: system-ui, sans-serif;
-      line-height: 1.5;
-    }
-    footer { margin-top: 3rem; font-size: 0.875rem; opacity: 0.75; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>This site is under construction</h1>
-    <p>It will show findings from the College-town home sales dataset.</p>
+  <header class="wrap">
+    <p class="eyebrow">College-town home sales, <span id="date-range">2023–2026</span></p>
+    <h1>What does a home cost near campus?</h1>
+    <p class="lede">Sale prices, price per square foot and time on market for <span data-fill="sales">35,442</span> home sales in 18 cities and towns near 11 universities.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="kpis" aria-label="Across all cities">
+      <div class="kpi"><span class="kpi-label">Sales</span><span class="kpi-value" data-fill="sales">–</span></div>
+      <div class="kpi"><span class="kpi-label">Median sale price</span><span class="kpi-value" data-fill="median_price">–</span></div>
+      <div class="kpi"><span class="kpi-label">Median price / sq ft</span><span class="kpi-value" data-fill="median_price_per_sqft">–</span></div>
+      <div class="kpi"><span class="kpi-label">Median days on market</span><span class="kpi-value" data-fill="median_days_on_market">–</span></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div>
+          <h2>Cities compared</h2>
+          <p class="note">Click a column name to sort. Click a city to see its details below.</p>
+        </div>
+        <label class="control">Bar shows
+          <select id="metric">
+            <option value="median_price">Median sale price</option>
+            <option value="median_price_per_sqft">Median price / sq ft</option>
+            <option value="median_days_on_market">Median days on market</option>
+            <option value="sales">Number of sales</option>
+          </select>
+        </label>
+      </div>
+      <div class="table-scroll">
+        <table id="city-table">
+          <thead>
+            <tr>
+              <th data-sort="city" scope="col">City</th>
+              <th data-sort="sales" scope="col" class="num">Sales</th>
+              <th data-sort="median_price" scope="col" class="num">Median price</th>
+              <th data-sort="median_price_per_sqft" scope="col" class="num">$ / sq ft</th>
+              <th data-sort="median_days_on_market" scope="col" class="num">Days on market</th>
+              <th scope="col" class="bar-col" id="bar-head">Median sale price</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card" id="detail">
+      <div class="card-head">
+        <div>
+          <h2 id="detail-title">All cities</h2>
+          <p class="note" id="detail-sub"></p>
+        </div>
+        <label class="control">Show
+          <select id="city-select"></select>
+        </label>
+      </div>
+      <div class="grid2">
+        <div>
+          <h3>Median price by year of sale</h3>
+          <div class="bars" id="year-bars"></div>
+          <p class="note" id="year-note"></p>
+        </div>
+        <div>
+          <h3>Median price by distance to campus</h3>
+          <div class="bars" id="distance-bars"></div>
+          <p class="note">Straight-line distance from the home to the nearest campus landmark.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card method">
+      <h2>How these numbers were made</h2>
+      <ul>
+        <li><strong>Prices</strong> leave out the <span data-fill-root="below_min_price">40</span> sales under $10,000, which are not real market prices. Medians are used instead of averages, because a few sales run into the tens of millions.</li>
+        <li><strong>Price per square foot</strong> also leaves out homes with no living area recorded or a living area of 0.</li>
+        <li><strong>Days on market</strong> is the number of days from listing to going under contract. It is only counted for sales that have both dates (<span data-fill="days_on_market_sales">28,042</span> sales). Homes sold without a listing are left out, not counted as 0 days.</li>
+        <li><strong>Sales</strong> counts every row for the city, including those left out of the price figures.</li>
+        <li>Every number is computed from <code>data/college_town_home_sales.csv</code> by <code>scripts/build_summary.py</code>, which writes <code>data/site_summary.json</code>.</li>
+      </ul>
+    </section>
   </main>
-  <footer>
+
+  <footer class="wrap">
     <p>Data: College-town home sales dataset, version 1.0 (2026). University of Illinois-Deloitte Foundation Center for Business Emerging Technologies. Data collected March 2026.</p>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
